@@ -19,15 +19,10 @@
   white-space: normal
 
 .nav__list-item
-  margin-top: 32px
-  &:first-child
-    margin-top: 0
-
-.nav__link
   position: relative
   display: block
   box-sizing: border-box
-  padding-left: 40px
+  padding: 0 0 32px 40px
   text-decoration: none
   +f(r, 12, 50)
   line-height: 1.83
@@ -39,6 +34,7 @@
   &:before
     content: ""
     position: absolute
+    z-index: 1
     top: em(8,12)
     left: 0
     width: 5px
@@ -46,6 +42,20 @@
     background: $lightgray
     border-radius: 50%
     +trans
+  &:after
+    content: ""
+    position: absolute
+    z-index: 0
+    top: em(8,12)
+    left: 2px
+    height: 0
+    width: 1px
+    background: $blue
+    +trans(height)
+  &:last-child
+    padding-bottom: 0
+    &:after
+      display: none
   &:hover
     color: $blue
     &:before
@@ -59,6 +69,17 @@
     &:before
       background: $blue
       box-shadow: 0 0 0 2px $blue
+    &:after
+      height: 100%
+  &.is-active + &
+    &:before
+      &:before
+      background: $blue
+      box-shadow: 0 0 0 2px $blue
+
+.nav__link
+  text-decoration: none
+  color: inherit
 
 
 .nav__link-inner

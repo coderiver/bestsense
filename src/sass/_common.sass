@@ -6,6 +6,9 @@ $lightgray: #CCC
 $graytext: #777
 $text: #333
 
+$bp1: 950
+$bp2: 767
+
 +font("AvenirNextCyr-Bold", AvenirNextCyr-Bold)
 +font("AvenirNextCyr-Demi", AvenirNextCyr-Demi)
 +font("AvenirNextCyr-Regular", AvenirNextCyr-Regular)
@@ -27,8 +30,9 @@ $text: #333
 
 body
   padding-top: 100px
+  min-width: 320px
   +f(r, 18)
-  line-height: 1.333
+  line-height: 1.555
   color: $text
   +smoothfont
 
@@ -40,3 +44,10 @@ body
   +trans(transform)
   .nav-active &
     transform: translate3d(215px,0,0)
+
+
++r($bp1)
+  body
+    padding-top: 0
+    font-size: 16px
+

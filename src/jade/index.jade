@@ -29,31 +29,34 @@ block content
     a(name="about-event")
     section#about-event.l-center
       .b.b_right.b_about-1
+        .b__picture
+          img(src="img/promo-1.png", alt="")
+
         .b__text
           h2.title
             | Мы познакомим вас с технологией, которая уже в этом году
             | начнёт менять мир взаимодействия человека с компьютером
-        .b__picture
-          img(src="img/promo-1.png", alt="")
 
       .b.b_left.b_about-2
+        .b__picture
+          img(src="img/promo-2.png", alt="")
+
         .b__text
           h2.title
             | Мы дадим каждой команде 3D камеру, которая
             | будет доступна в продаже только через полгода
           strong.subtitle
             | У вас останется 3D камера для улучшения собственного приложения с трехмерным интерфейсом
-        .b__picture
-          img(src="img/promo-2.png", alt="")
 
       .b.b_right.b_about-3
+        .b__picture
+          img(src="img/promo-3.png", alt="")
+
         .b__text
           h2.subtitle
             | Лучшие получат<br>от нас призы —
           strong.title.title_medium
             | ноутбуки
-        .b__picture
-          img(src="img/promo-3.png", alt="")
 
       //BEGIN promo
       .promo
@@ -108,8 +111,9 @@ block content
     section#event-structure
       .wrapper
         .l-center
-           h2.title.title_medium.title_mrg
+          h2.title.title_medium.title_mrg
             | Структура<br>хакатона
+
           .l-center-narrow
             strong.title
               | 25 июля
@@ -160,4 +164,113 @@ block content
                   | 15:00
                 p.timeline__text
                   | Старт хакатона
+
+            strong.title
+              | 26 июля
+            ul.timeline
+              li.timeline__item
+                strong.timeline__time
+                  | 15:00
+                p.timeline__text
+                  | Презентация проектов и демонстраций
+              li.timeline__item
+                strong.timeline__time
+                  | 12:00
+                p.timeline__text
+                  | Открытие
+              li.timeline__item.timeline__item_last
+                strong.timeline__time
+                  | Фуршет и награждение победителей
+
+          h2.title.title_medium.title_mrg
+            | Место<br>проведения
+
+        .slider
     //END event-structure
+
+    //BEGIN about-camera
+    section#about-camera
+        .about-camera
+          .l-center
+            .about-camera__left
+              .about-camera__text
+                h2.title.title_medium
+                  | Технический обзор
+                p
+                  | Камера Intel® RealSense переопределяет то, как человек заимодействует
+                  | с устройствами в играх, развлечениях, и создании контента.
+                  | Благодаря полному цвету 1080p и датчику глубины, лучшему в своем классе,
+                  | камера передает на компьютеры и планшеты 3D картинку, а с ней и новые
+                  | захватывающие ощущения. Взаимодействие становится более интуитивным,
+                  | а управление устройством - гибким, при помощи анализа лица, рук и
+                  | отслеживания движений пальцев, распознавание речи, устранения фона
+                  | и дополненной реальности.
+
+            .about-camera__right
+              figure.figure
+                .figure__picture
+                  img(src="img/face.png", alt="facial analysis")
+                figcaption.figure__text
+                  | Анализ<br>лица
+              figure.figure
+                .figure__picture
+                  img(src="img/hand.png", alt="hand & finger tracking")
+                figcaption.figure__text
+                  | Слежение за<br>руками и пальцами
+              figure.figure
+                .figure__picture
+                  img(src="img/speech.png", alt="speech recognition")
+                figcaption.figure__text
+                  | Распознание<br>речи
+              figure.figure
+                .figure__picture
+                  img(src="img/background.png", alt="background subtraction")
+                figcaption.figure__text
+                  | Удаление<br>фона
+              figure.figure
+                .figure__picture
+                  img(src="img/augmented-reality.png", alt="augmented reality")
+                figcaption.figure__text
+                  | Дополненная<br>реальность
+
+          .about-camera__picture
+            img(src="img/camera-intro.png", alt="Camera")
+    //END about-camera
+
+    //BEGIN partners
+    section.partners
+      .l-center
+        h2.title.title_medium.title_mrg
+          | Информационные<br>партнеры
+        ul.partners__grid
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/geeks-lab.png", alt="geeks-lab")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/growth-up.png", alt="growth-up")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/it-academy.png", alt="it-academy")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/itkpi.png", alt="itkpi")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/itvdn.png", alt="itvdn")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/seclub.png", alt="seclub")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/itkpi.png", alt="itkpi")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/itvdn.png", alt="itvdn")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/seclub.png", alt="seclub")
+          li.partners__grid-item
+            a(href="#")
+              img(src="img/partners/seclub.png", alt="seclub")
+    //END partners

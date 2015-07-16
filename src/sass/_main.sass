@@ -1,24 +1,28 @@
 .intro
-  margin: 140px 0 0
-  padding-left: 160px
+  margin: percentage(140/1368) 0 0
+  padding: 0 0 percentage(350/1368) percentage(160/1368)
   position: relative
-  min-height: 625px
+  // +r($bp1)
 
 .intro__heading
   position: relative
-  z-index: auto
+  z-index: 1
   max-width: 540px
+  text-shadow: 0 0 5px rgba(#FFF, 0.2)
   .subtitle
     margin-top: 45px
 
 .intro__picture
   position: absolute
-  z-index: 1
+  z-index: 0
   top: -50px
   right: 0
+  width: percentage(813/1368)
+  max-width: 813px
   img
     display: block
     max-width: 100%
+
 
 .b
   position: relative
@@ -40,25 +44,39 @@
 .b_about-1
   padding-top: 310px
   min-height: 570px
-  margin-bottom: 320px
+  margin-bottom: percentage(320/960)
   .b__picture
     top: 0
     right: 60%
 
 .b_about-2
   padding-top: 330px
-  margin-bottom: 160px
+  margin-bottom: percentage(160/960)
   .b__picture
     top: -25px
     right: -515px
 
 .b_about-3
   padding-top: 410px
-  margin-bottom: 230px
+  margin-bottom: percentage(230/960)
   min-height: 800px
   .b__picture
     top: 0
     right: 330px
+
++r($bp1)
+  .b
+    padding: 0
+    min-height: 0
+    margin-bottom: percentage(60/320)
+  .b__picture
+    position: static
+    margin-bottom: 20px
+    max-height: 300px
+    img
+      max-width: 100%
+      max-height: 100%
+
 
 .promo
   max-width: 470px
@@ -79,7 +97,7 @@
 
 
 .text
-  margin: 165px auto
+  margin: percentage(165/1368) auto
   line-height: 1.555
   &:first-child
     margin-top: 0
@@ -107,30 +125,129 @@
 
 
 .wrapper
-  padding-top: 160px
+  padding-top: percentage(160/1368)
   background: #FFF
   position: relative
   z-index: 2
 
 
 .timeline
-  margin: 50px 0 90px 120px
+  // margin: 50px 0 110px 120px
+  margin: percentage(50/960) 0 percentage(110/960) percentage(120/960)
   +f(r, 12)
   line-height: 1.5
+  &:last-child
+    margin-bottom: 0
 
 .timeline__item
   position: relative
   padding-left: 110px
-  margin-top: 30px
-  &:first-child
-    margin-top: 0
+  padding-bottom: 30px
+  &:before
+    content: ""
+    position: absolute
+    top: 5px
+    left: 0
+    width: 7px
+    height: 7px
+    background: $text
+    border-radius: 50%
+  &:after
+    content: ""
+    position: absolute
+    top: 5px
+    left: 3px
+    height: 100%
+    width: 1px
+    background: $text
+  &:last-child
+    padding-bottom: 0
+    &:after
+      display: none
+
+.timeline__item_last
+  padding-left: 40px
+  .timeline__time
+    position: static
 
 .timeline__time
   position: absolute
   top: 0
-  left: 0
-  width: 110px
-  text-align: center
+  left: 40px
   +f(b, 12)
 
-.timeline__text
+
+.slider
+  height: 380px
+  background: $blue
+
+
+.about-camera
+  padding-top: 340px
+  position: relative
+  z-index: 3
+  +clr
+  .title
+    margin-bottom: 70px
+
+.about-camera__left
+  float: left
+  width: percentage(490/960)
+
+.about-camera__right
+  float: right
+  width: percentage(360/960)
+  margin-top: 360px
+
+.about-camera__text
+
+.about-camera__picture
+  position: absolute
+  top: -76px
+  right: 0
+
+
+.figure
+  display: table
+  table-layout: fixed
+  width: 100%
+  position: relative
+  & + &
+    margin-top: 70px
+
+.figure__picture
+  display: table-cell
+  vertical-align: middle
+  width: 115px
+  box-sizing: border-box
+  padding-right: 30px
+
+.figure__text
+  display: table-cell
+  vertical-align: middle
+  +f(b, 18)
+  line-height: 1.33
+
+
+.partners
+  margin-top: 160px
+
+.partners__grid
+  font-size: 0
+  text-align: center
+  margin-bottom: -60px
+
+.partners__grid-item
+  display: inline-block
+  vertical-align: middle
+  margin-bottom: 60px
+  // width: 20%
+  width: 190px
+  box-sizing: border-box
+  padding: 0 30px
+  a
+    display: inline-block
+    text-decoration: none
+  img
+    display: block
+    max-width: 100%

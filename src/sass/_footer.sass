@@ -1,0 +1,55 @@
+.footer
+  margin-top: 180px
+  padding: 40px 115px
+  background: $gray
+  +f(r, 12, 50)
+  color: $graytext
+  +clr
+
+.footer__links
+  float: left
+  text-transform: uppercase
+  > li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  a
+    text-decoration: none
+    color: inherit
+    +trans(color)
+    &:hover
+      color: $blue
+
+.footer__designer
+  float: right
+  white-space: nowrap
+  a
+    display: inline-block
+    margin-left: 3px
+    color: $text
+    text-decoration: none
+    +trans(color)
+    +f(b, null, 250)
+    text-transform: uppercase
+    &:hover
+      color: $blue
+
++r($bp1)
+  .footer
+    text-align: center
+    padding: 30px
+    margin-top: 100px
+    .footer__links
+      float: none
+      text-align: center
+      line-height: 2
+      > li
+        margin: 0 10px
+
+  .footer__designer
+    float: none
+    text-align: center
+    margin-top: 15px
+

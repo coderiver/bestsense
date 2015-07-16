@@ -32,12 +32,12 @@ a.btn_large
   display: block
   +f(b, 30)
   > sup
-    font-size: 13px
+    font-size: em(13,100)
     vertical-align: super
     color: $lightgray
     position: relative
-    bottom: 30px
-    left: 10px
+    bottom: em(30,13)
+    left: em(10,13)
 
 .title_small
   font-size: 24px
@@ -45,19 +45,24 @@ a.btn_large
 
 .title_medium
   font-size: 72px
+  line-height: 1.11
 
 .title_large
   font-size: 100px
   line-height: 1
 
 .title_mrg
-  margin-bottom: 125px
+  margin-top: em(150,72)
+  margin-bottom: em(125,72)
+  &:first-child
+    margin-top: 0
 
 .subtitle
   display: block
   margin: 25px 0 0
   color: $graytext
   +f(r, 24)
+  line-height: 1.333
   &:first-child
     margin-top: 0
   // &:last-child
@@ -65,3 +70,24 @@ a.btn_large
 
 .subtitle_small
   font-size: 18px
+
+
++r($bp1)
+  .title
+    font-size: 24px
+  .title_medium
+    font-size: 40px
+  .title_large
+    font-size: 72px
+  .subtitle
+    font-size: 20px
+
++r($bp1)
+  .title
+    font-size: 20px
+  .title_medium
+    font-size: 30px
+  .title_large
+    font-size: 40px
+  .subtitle
+    font-size: 18px
