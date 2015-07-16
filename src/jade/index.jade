@@ -1,0 +1,163 @@
+extends _layout
+
+//- block vars
+//-   - var pageTitle = 'Index'
+//-   - var bodyClass = 'index-page'
+//-   - var outClass  = 'out_mod'
+//-   - var svgSprite = 'img/sprite.svg'
+
+append scripts
+  script
+    | console.log('hello from index page!!');
+
+block content
+  .content-wrapper
+    //BEGIN intro
+    a(name="intro")
+    section.intro#intro
+      .intro__heading
+        h1.title.title_large
+          | RealSense<sup>TM</sup><br>Hands-On
+        strong.subtitle.subtitle_small
+          | Невероятный хакатон приложений к 3D камере<br>на тему дополненной реальности
+
+      .intro__picture
+        img(src="img/camera-intro.png", alt="Camera")
+    //END intro
+
+    //BEGIN about-event
+    a(name="about-event")
+    section#about-event.l-center
+      .b.b_right.b_about-1
+        .b__text
+          h2.title
+            | Мы познакомим вас с технологией, которая уже в этом году
+            | начнёт менять мир взаимодействия человека с компьютером
+        .b__picture
+          img(src="img/promo-1.png", alt="")
+
+      .b.b_left.b_about-2
+        .b__text
+          h2.title
+            | Мы дадим каждой команде 3D камеру, которая
+            | будет доступна в продаже только через полгода
+          strong.subtitle
+            | У вас останется 3D камера для улучшения собственного приложения с трехмерным интерфейсом
+        .b__picture
+          img(src="img/promo-2.png", alt="")
+
+      .b.b_right.b_about-3
+        .b__text
+          h2.subtitle
+            | Лучшие получат<br>от нас призы —
+          strong.title.title_medium
+            | ноутбуки
+        .b__picture
+          img(src="img/promo-3.png", alt="")
+
+      //BEGIN promo
+      .promo
+        h2.title
+          | Количество мест ограничено техникой и пространством
+        a.btn.btn_large(href="#")
+          | Зарегистрироваться
+        p
+          | Зарегистрируйся сейчас, чтобы<br>
+          | успеть пройти отбор
+      //END promo
+    //END about-event
+
+    //BEGIN about-technology
+    a(name="about-technology")
+    section#about-technology
+      .video
+        img(src="img/video.jpg", alt="Video")
+      .wrapper
+        .l-center
+          h2.title.title_medium.title_mrg
+            | Несколько слов<br>о технологии
+
+          .l-center-narrow
+            .text
+              p
+                | Чуть больше года назад Intel презентовала новую технологию — RealSense™.
+                | Схема простая: есть 3D камера RealSense, захватывающая все ваши движения, вплоть
+                | до мимики, и есть приложения, которые реализуют ее возможности.
+              p
+                | Камера RealSense™ способна сканировать объекты, оценивая глубину, размеры,
+                | контуры, цвета и расстояние до предметов. С полученными в результате этого
+                | виртуальными копиями объектов можно выполнять любые манипуляции, и даже
+                | печатать их на 3D-принтерах. Технология отслеживает движения рук и пальцев,
+                | распознает речь и анализирует мимику человека (положение и форму губ, глаз и щек).
+                | Все это делает ее мощным инструментом для разработки приложений нового поколения.
+              p
+                | Корпорация Intel® организует ивенты для разработчиков, интересующихся
+                | перцепционными вычислениями, созданием 3D-интерфейсов и виртуальной реальностью.
+                | Специалисты Intel расскажут об основах разработки приложений для камер RealSense™.
+                | После этого участники семинара смогут самостоятельно опробовать возможности
+                | SDK и самого устройства.
+
+            strong.title.title_small
+              | Взгляните на создание интерфейсов по-новому и станьте одним из первопроходцев
+              | следующей ступени взаимодействия человека и компьютера
+
+        .about-technology-picture(style="background-image:url('img/bg.jpg')")
+    //END about-technology
+
+    //BEGIN event-structure
+    section#event-structure
+      .wrapper
+        .l-center
+           h2.title.title_medium.title_mrg
+            | Структура<br>хакатона
+          .l-center-narrow
+            strong.title
+              | 25 июля
+            ul.timeline
+              li.timeline__item
+                strong.timeline__time
+                  | 11:00
+                p.timeline__text
+                  | Регистрация участников
+                  br
+                  | Приветственный кофе
+              li.timeline__item
+                strong.timeline__time
+                  | 12:00
+                p.timeline__text
+                  | Открытие
+              li.timeline__item
+                strong.timeline__time
+                  | 12:15
+                p.timeline__text
+                  | Обзор технологии Intel RealSense. Начало работы с комплектом разработчика
+                  | Intel RealSense Development Kit. Александр Лазарев,
+                  | Старший Инженер отдела по работе с разработчиками ПО
+              li.timeline__item
+                strong.timeline__time
+                  | 13:00
+                p.timeline__text
+                  | Разбор приложений для Intel RealSense на языках C# и Visual Basic, Unity.
+                  | Михаил Никольский, Ведущий Инженер по разработке ПО
+              li.timeline__item
+                strong.timeline__time
+                  | 13:45
+                p.timeline__text
+                  | Кофе-брейк
+              li.timeline__item
+                strong.timeline__time
+                  | 14:00
+                p.timeline__text
+                  | Сканирование 3D-объектов для электронной коммерции и 3D-принтинга.
+                  | Константин Попов, Генеральный директор Cappasity 3D
+              li.timeline__item
+                strong.timeline__time
+                  | 14:30
+                p.timeline__text
+                  | Питчинг идей
+              li.timeline__item
+                strong.timeline__time
+                  | 15:00
+                p.timeline__text
+                  | Старт хакатона
+    //END event-structure

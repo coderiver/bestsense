@@ -1,0 +1,67 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 99
+  background: #FFF
+  height: 100px
+  line-height: 40px
+  padding: 30px 0 30px 30px
+  box-sizing: border-box
+  +clr
+  .btn
+    vertical-align: middle
+
+.header__left
+  float: left
+  font-size: 0
+
+.header__right
+  float: right
+  font-size: 0
+
+.header__logo
+  display: inline-block
+  vertical-align: middle
+  img
+    display: block
+
+.header__amp
+  display: inline-block
+  vertical-align: middle
+  margin: 0 20px
+  font-size: 18px
+
+.header__date
+  display: inline-block
+  vertical-align: middle
+  margin-right: 40px
+  color: $blue
+  +f(r, 16, 50)
+  text-transform: uppercase
+
+.lang
+  display: inline-block
+  vertical-align: middle
+  background: $gray
+  padding: 0 20px
+  font-size: 0
+  > li
+    display: inline-block
+    vertical-align: top
+
+.lang__link
+  display: block
+  min-width: 37px
+  box-sizing: border-box
+  padding: 0 5px
+  text-decoration: none
+  color: $graytext
+  +trans(color)
+  +f(r, 12, 50)
+  line-height: 40px
+  text-transform: uppercase
+  text-align: center
+  &:hover
+    color: $blue

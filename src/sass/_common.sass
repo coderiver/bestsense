@@ -1,0 +1,42 @@
+$blue: #007DC6
+$hoverblue: #0272B3
+$activeblue: #0168A4
+$gray: #EEE
+$lightgray: #CCC
+$graytext: #777
+$text: #333
+
++font("AvenirNextCyr-Bold", AvenirNextCyr-Bold)
++font("AvenirNextCyr-Demi", AvenirNextCyr-Demi)
++font("AvenirNextCyr-Regular", AvenirNextCyr-Regular)
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "b"
+    $font-family: "AvenirNextCyr-Bold"
+  @if $name == "demi"
+    $font-family: "AvenirNextCyr-Demi"
+  @if $name == "r"
+    $font-family: "AvenirNextCyr-Regular"
+  font-family: $font-family, Arial, sans-serif
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: $letter-spacing/1000 + em
+
+body
+  padding-top: 100px
+  +f(r, 18)
+  line-height: 1.333
+  color: $text
+  +smoothfont
+
+.out
+  overflow: hidden
+  min-height: 100%
+
+.content-wrapper
+  +trans(transform)
+  .nav-active &
+    transform: translate3d(215px,0,0)

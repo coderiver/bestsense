@@ -1,0 +1,71 @@
+.nav
+  position: fixed
+  z-index: 98
+  top: 0
+  left: 0
+  bottom: 0
+  padding-left: 30px
+  max-width: 245px
+  +vertical
+  white-space: nowrap
+  &:hover
+    .nav__link-inner
+      width: 100%
+      opacity: 1
+
+.nav__list
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+
+.nav__list-item
+  margin-top: 32px
+  &:first-child
+    margin-top: 0
+
+.nav__link
+  position: relative
+  display: block
+  box-sizing: border-box
+  padding-left: 40px
+  text-decoration: none
+  +f(r, 12, 50)
+  line-height: 1.83
+  text-transform: uppercase
+  color: $graytext
+  +trans(color)
+  white-space: nowrap
+  cursor: pointer
+  &:before
+    content: ""
+    position: absolute
+    top: em(8,12)
+    left: 0
+    width: 5px
+    height: 5px
+    background: $lightgray
+    border-radius: 50%
+    +trans
+  &:hover
+    color: $blue
+    &:before
+      background: $blue
+  &:active
+    color: $activeblue
+    &:before
+      background: $activeblue
+  &.is-active
+    color: $text
+    &:before
+      background: $blue
+      box-shadow: 0 0 0 2px $blue
+
+
+.nav__link-inner
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  width: 0
+  opacity: 0
+  +trans
+  transition-property: opacity, width

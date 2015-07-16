@@ -1,0 +1,67 @@
+.btn
+  display: inline-block
+  height: 40px
+  background: $blue
+  box-sizing: border-box
+  padding: 0 20px
+  min-width: 215px
+  +f(demi, 12, 50)
+  line-height: normal
+  text-transform: uppercase
+  color: #FFF
+  text-decoration: none
+  text-transform: uppercase
+  text-align: center
+  +trans(background)
+  &:hover
+    background: $hoverblue
+  &:active
+    background: $activeblue
+
+a.btn
+  line-height: 40px
+
+.btn_large
+  width: 330px
+  height: 50px
+
+a.btn_large
+  line-height: 50px
+
+.title
+  display: block
+  +f(b, 30)
+  > sup
+    font-size: 13px
+    vertical-align: super
+    color: $lightgray
+    position: relative
+    bottom: 30px
+    left: 10px
+
+.title_small
+  font-size: 24px
+  line-height: 1.25
+
+.title_medium
+  font-size: 72px
+
+.title_large
+  font-size: 100px
+  line-height: 1
+
+.title_mrg
+  margin-bottom: 125px
+
+.subtitle
+  display: block
+  margin: 25px 0 0
+  color: $graytext
+  +f(r, 24)
+  &:first-child
+    margin-top: 0
+  // &:last-child
+  //   margin-bottom: 0
+
+.subtitle_small
+  font-size: 18px

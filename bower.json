@@ -1,0 +1,20 @@
+{
+  "name": "Gulper",
+  "version": "0.3.0",
+  "homepage": "https://github.com/buschidos/gulp",
+  "authors": [
+    "coderiver",
+    "bushidos"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.2"
+  }
+}

@@ -1,0 +1,22 @@
+include _mixins
+block vars
+doctype html
+html
+  head
+    include _head
+
+  body(class=bodyClass)
+    block header
+      include partials/_header
+
+    block nav
+      include partials/_nav
+
+    //BEGIN out
+    .out(class=outClass)
+      block content
+    //END out
+
+    //LOAD SCRIPTS
+    block scripts
+      script(src="js/main.js")
