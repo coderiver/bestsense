@@ -3,10 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Template</title>
+    <meta name="description" content="Page description. No longer than 155 characters.">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if lt IE 9]><script src="js/lib/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+    <!--Twitter Card data-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="Page description less than 200 characters">
+    <meta name="twitter:creator" content="@author_handle">
+    <meta name="twitter:image" content="http://www.example.com/image.jpg/at least 120x120px">
+    <!--Open Graph data-->
+    <meta property="og:title" content="Title Here">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.example.com/">
+    <meta property="og:image" content="http://example.com/image.jpg">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name, i.e. Moz">
+    <meta property="fb:admins" content="Facebook numeric ID">
   </head>
   <body>
     <!--BEGIN header-->
@@ -16,7 +32,14 @@
         <button type="button" class="menu__btn">
           <div class="menu__btn-icon"></div>
         </button>
-        <div class="menu__inner"><span class="header__date">24-25 июля</span><a href="#" class="btn">Зарегистрироваться</a>
+        <div class="menu__inner">
+          <ul class="menu__navigation">
+            <li><a href="#intro">Главная</a></li>
+            <li><a href="#about-event">Описание события</a></li>
+            <li><a href="#about-technology">Описание технологии</a></li>
+            <li><a href="#event-structure">Структура хакатона</a></li>
+            <li><a href="#partners">Партнеры</a></li>
+          </ul><span class="header__date">24-25 июля</span><a href="#" class="btn">Зарегистрироваться</a>
           <ul class="lang">
             <li><a href="#" class="lang__link">Укр</a></li>
             <li><a href="#" class="lang__link">Рус</a></li>
@@ -39,7 +62,7 @@
     <!--BEGIN out-->
     <div class="out">
       <div class="content-wrapper">
-        <!--BEGIN intro--><a name="intro"></a>
+        <!--BEGIN intro-->
         <section id="intro" class="intro">
           <div class="intro__heading">
             <h1 class="title title_large">RealSense<sup>TM</sup><br>Hands-On</h1>
@@ -48,7 +71,7 @@
           <div class="intro__picture"><img src="img/camera-intro.png" alt="Camera"></div>
         </section>
         <!--END intro-->
-        <!--BEGIN about-event--><a name="about-event"></a>
+        <!--BEGIN about-event-->
         <section id="about-event" class="l-center">
           <div class="b b_right b_about-1">
             <div class="b__picture"><img src="img/promo-1.png" alt=""></div>
@@ -94,7 +117,7 @@
           <!--END promo-->
         </section>
         <!--END about-event-->
-        <!--BEGIN about-technology--><a name="about-technology"></a>
+        <!--BEGIN about-technology-->
         <section id="about-technology">
           <div class="video"><img src="img/video.gif" alt="Video"></div>
           <div class="wrapper">

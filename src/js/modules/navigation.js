@@ -7,6 +7,7 @@ function Navigation() {
     var doc           = $(document);
     var activeClass   = 'is-active';
     var drawLineClass = 'draw-line';
+    var breakpoint    = 935;
 
     _.$nav       = $('#nav');
     _.$items     = _.$nav.find('.nav__list-item');
@@ -17,6 +18,7 @@ function Navigation() {
     });
 
     _.correction = 100; // height of fixed header in px
+    _.controller = null;
 
     _.scrollTo = function(element) {
         var target = element instanceof jQuery ? element : $(element);
@@ -32,10 +34,18 @@ function Navigation() {
         });
 
         win.on('resize', function() {
-            // rebuild scroll scenes
-            _.controller.destroy(true);
-            _.buildScenes();
-            _.controller.update();
+            var winWidth = win.width();
+
+            // rebuild scroll scenes on resize
+            if (winWidth > breakpoint) {
+                _.buildScenes();
+                _.controller.update();
+            }
+
+            // destroy scroll scenes on mobile
+            if (winWidth <= breakpoint && _.controller !== null) {
+                _.destroyScenes();
+            }
         });
     };
 
@@ -66,13 +76,18 @@ function Navigation() {
         });
     };
 
+    _.destroyScenes = function() {
+        _.controller.destroy(true);
+        _.controller = null;
+    };
+
     _.init = function() {
         // add active class to first item of navigation
         $(_.$links[0]).addClass(activeClass);
         _.initEvents();
-        _.buildScenes();
-
-        console.log(_);
+        if (win.width() > breakpoint) {
+            _.buildScenes();
+        }
     };
 
 }

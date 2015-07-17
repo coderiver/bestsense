@@ -2,7 +2,6 @@ global.$ = global.jQuery = require('jquery');
 require('slick-carousel');
 require('jquery.transit');
 var ScrollMagic = require('scrollmagic');
-var nav         = require('./modules/navigation.js');
 
 $(document).ready(function() {
 
@@ -10,9 +9,12 @@ $(document).ready(function() {
     var body             = $('body');
     var slider           = $('.slider');
     var win              = $(window);
+    var nav              = require('./modules/navigation.js');
+    var menu             = require('./modules/menu.js');
     var scrollController = null;
 
     nav.init();
+    menu.init();
 
     navigation.on('mouseover', function() {
         body.addClass('nav-active');
@@ -109,13 +111,13 @@ $(document).ready(function() {
         scrollController = null;
     }
 
-    if (win.width() > 950) {
+    if (win.width() > 935) {
         buildScrollScenes();
     }
 
     win.on('resize', function() {
         var winWidth = win.width();
-        if (winWidth < 950) {
+        if (winWidth < 935) {
             if (scrollController !== null) {
                 destroyScrollScenes();
             }
