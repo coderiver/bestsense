@@ -109,7 +109,9 @@ $(document).ready(function() {
         scrollController = null;
     }
 
-    buildScrollScenes();
+    if (win.width() > 950) {
+        buildScrollScenes();
+    }
 
     win.on('resize', function() {
         var winWidth = win.width();

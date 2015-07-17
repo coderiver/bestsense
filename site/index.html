@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Template</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=1100">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if lt IE 9]><script src="js/lib/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -12,11 +12,16 @@
     <!--BEGIN header-->
     <header class="header">
       <div class="header__left"><a href="#" class="header__logo"><img src="img/realsense.svg" alt="Real Sense logotype"></a><span class="header__amp">&amp;</span><a href="#" class="header__logo"><img src="img/webchallenge.svg" alt="Web Challenge logotype"></a></div>
-      <div class="menu"><span class="header__date">24-25 июля</span><a href="#" class="btn">Зарегистрироваться</a>
-        <ul class="lang">
-          <li><a href="#" class="lang__link">Укр</a></li>
-          <li><a href="#" class="lang__link">Рус</a></li>
-        </ul>
+      <div class="menu">
+        <button type="button" class="menu__btn">
+          <div class="menu__btn-icon"></div>
+        </button>
+        <div class="menu__inner"><span class="header__date">24-25 июля</span><a href="#" class="btn">Зарегистрироваться</a>
+          <ul class="lang">
+            <li><a href="#" class="lang__link">Укр</a></li>
+            <li><a href="#" class="lang__link">Рус</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <!--END header-->

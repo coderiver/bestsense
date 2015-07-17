@@ -53,10 +53,10 @@ a.btn_large
   line-height: 1
 
 .title_mrg
-  // margin-top: em(150,72)
-  // margin-bottom: em(125,72)
-  margin-top: percentage(150/960)
-  margin-bottom: percentage(125/960)
+  margin-top: em(150,72)
+  margin-bottom: em(125,72)
+  // margin-top: percentage(150/960)
+  // margin-bottom: percentage(125/960)
   &:first-child
     margin-top: 0
 
@@ -76,6 +76,21 @@ a.btn_large
 .subtitle_small
   font-size: 18px
 
+.link
+  color: $blue
+  +trans(color)
+  &:hover
+    color: $activeblue
+
+.marked-list
+  padding-left: 30px
+  > li
+    margin-top: 10px
+    &:first-child
+      margin-top: 0
+
+ul.marked-list
+  list-style-type: disc
 
 +r($bp1)
   .title
@@ -84,9 +99,9 @@ a.btn_large
     font-size: 40px
   .title_large
     font-size: 72px
-  .title_mrg
-    margin-top: percentage(75/960)
-    margin-bottom: percentage(50/960)
+  // .title_mrg
+    // margin-top: percentage(75/960)
+    // margin-bottom: percentage(50/960)
   .subtitle
     font-size: 20px
 
@@ -100,14 +115,3 @@ a.btn_large
   .subtitle
     font-size: 18px
 
-.link
-  color: $blue
-  +trans(color)
-  &:hover
-    color: $activeblue
-
-.marked-list
-  padding-left: 30px
-
-ul.marked-list
-  list-style-type: disc
