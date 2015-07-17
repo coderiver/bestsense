@@ -16,11 +16,11 @@
     height: auto
     text-align: center
     position: relative
-    padding: 30px
+    padding: 20px
     .header__left
       float: none
       line-height: 50px
-    .header__right
+    .menu
       float: none
     .header__date
       font-size: 12px
@@ -35,9 +35,20 @@
   float: left
   font-size: 0
 
-.header__right
+.menu
   float: right
   font-size: 0
+
+.menu__btn
+  background: none
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 1px
+    background: $gray
+
 
 .header__logo
   display: inline-block

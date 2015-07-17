@@ -31,6 +31,7 @@ a.btn_large
 .title
   display: block
   +f(b, 30)
+  line-height: 1.2
   > sup
     font-size: em(13,100)
     vertical-align: super
@@ -96,3 +97,15 @@ a.btn_large
     font-size: 40px
   .subtitle
     font-size: 18px
+
+.link
+  color: $blue
+  +trans(color)
+  &:hover
+    color: $activeblue
+
+.marked-list
+  padding-left: 30px
+
+ul.marked-list
+  list-style-type: disc

@@ -56,7 +56,7 @@
   padding-left: 48%
 
 .b_about-1
-  padding-top: 310px
+  // padding-top: 310px
   min-height: 570px
   // margin-bottom: percentage(320/960)
   margin-bottom: 320px
@@ -124,8 +124,19 @@
     width: 100%
 
 
-.text
-  margin: percentage(165/1368) auto
+.about-technology
+  +clr
+
+.about-technology__aside
+  float: right
+  width: 30%
+  box-sizing: border-box
+
+.about-technology__text
+  float: left
+  width: 65%
+  box-sizing: border-box
+  // margin: percentage(165/1368) auto
   line-height: 1.555
   &:first-child
     margin-top: 0
@@ -139,6 +150,9 @@
       margin-bottom: 0
     &::first-letter
       margin-left: 30px
+
+.about-technology__strong
+  margin-top: 170px
 
 
 .about-technology-picture
@@ -160,8 +174,8 @@
 
 
 .timeline
-  // margin: 50px 0 110px 120px
-  margin: percentage(50/960) 0 percentage(110/960) percentage(120/960)
+  margin: 50px 0 110px 120px
+  // margin: percentage(50/960) 0 percentage(110/960) percentage(120/960)
   +f(r, 12)
   line-height: 1.5
   &:last-child
@@ -283,9 +297,9 @@
 .figure__picture
   display: table-cell
   vertical-align: middle
-  width: 115px
+  width: percentage(115/288)
   box-sizing: border-box
-  padding-right: 30px
+  padding-right: percentage(30/288)
 
 .figure__text
   display: table-cell
@@ -306,16 +320,41 @@
   display: inline-block
   vertical-align: middle
   margin-bottom: 60px
-  // width: 20%
-  width: 190px
+  // width: 25%
+  width: 240px
   box-sizing: border-box
   padding: 0 30px
-  a
-    display: inline-block
-    text-decoration: none
+
+.partners__link
+  display: inline-block
+  text-decoration: none
+  position: relative
   img
     display: block
     max-width: 100%
+  img.monochrome
+    position: relative
+    z-index: 0
+    transition: none
+  img.color
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    visibility: hidden
+    transition: all 0.2s linear
+  &:hover
+    img.color
+      opacity: 1
+      visibility: visible
+    img.monochrome
+      opacity: 0
+      visibility: hidden
+      transition: all 0.1s linear 0.2s
+
 
 .slick-arrow
   display: none !important

@@ -15464,16 +15464,16 @@ $(document).ready(function() {
             .addTo(scrollController);
 
         // scene for text about camera in #about-camera section
-        new ScrollMagic.Scene({
-            triggerElement: '.about-camera__left',
-            duration: 500,
-            offset: -120,
-            triggerHook: 'onLeave'
-        })
-            .on('progress', function(e) {
-                text.transition({y: textShift * e.progress}, 0);
-            })
-            .addTo(scrollController);
+        // new ScrollMagic.Scene({
+        //     triggerElement: '.about-camera__left',
+        //     duration: 500,
+        //     offset: -120,
+        //     triggerHook: 'onLeave'
+        // })
+        //     .on('progress', function(e) {
+        //         text.transition({y: textShift * e.progress}, 0);
+        //     })
+        //     .addTo(scrollController);
     }
 
     function destroyScrollScenes() {

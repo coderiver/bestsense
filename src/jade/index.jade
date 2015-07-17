@@ -6,10 +6,6 @@ extends _layout
 //-   - var outClass  = 'out_mod'
 //-   - var svgSprite = 'img/sprite.svg'
 
-append scripts
-  script
-    | console.log('hello from index page!!');
-
 block content
   .content-wrapper
     //BEGIN intro
@@ -19,7 +15,14 @@ block content
         h1.title.title_large
           | RealSense<sup>TM</sup><br>Hands-On
         strong.subtitle.subtitle_small
-          | Невероятный хакатон приложений к 3D камере<br>на тему дополненной реальности
+          | Хакатон приложений к 3D-камере
+          br
+          br
+          | 24-25 июля
+          br
+          | Испытайте новое измерение технологий<br>с 3D-камерой Intel® RealSense™.
+
+          //- | Невероятный хакатон приложений к 3D камере<br>на тему дополненной реальности
 
       .intro__picture
         img(src="img/camera-intro.png", alt="Camera")
@@ -34,8 +37,27 @@ block content
 
         .b__text
           h2.title
-            | Мы познакомим вас с технологией, которая уже в этом году
-            | начнёт менять мир взаимодействия человека с компьютером
+            | Прими участие в создании будущего.
+            //- | Мы познакомим вас с технологией, которая уже в этом году
+            //- | начнёт менять мир взаимодействия человека с компьютером
+          ul.subtitle.marked-list
+            li
+              | Познакомься с технологией, которая уже в этом году начнёт
+              | менять мир взаимодействия человека с компьютером.
+            li
+              | Собери команду и создай идею своего приложения.
+            li
+              | Получи 3D-камеру Intel® RealSense™ и воплоти идею в реальность с командой
+            li
+              | Выиграй приз за лучшую реализацию
+            li
+              | Продолжай исследовать возможности камеры и после хакатона
+
+          strong.subtitle
+            | Только представь, что ты будешь влиять на развитие мира дополненной реальности
+            | уже сейчас, в то время как большинство о ней ещё даже не слышали.
+
+
 
       .b.b_left.b_about-2
         .b__picture
@@ -54,9 +76,10 @@ block content
 
         .b__text
           h2.subtitle
-            | Лучшие получат<br>от нас призы —
+            //- | Лучшие получат<br>от нас призы —
+            | Призы
           strong.title.title_medium
-            | ноутбуки
+            | Ноутбуки
 
       //BEGIN promo
       .promo
@@ -78,145 +101,42 @@ block content
       .wrapper
         .l-center
           h2.title.title_medium.title_mrg
-            | Несколько слов<br>о технологии
+            | Что за технология
 
-          .l-center-narrow
-            .text
+          //- .l-center-narrow
+          .about-technology
+            article.text.about-technology__text
               p
-                | Чуть больше года назад Intel презентовала новую технологию — RealSense™.
-                | Схема простая: есть 3D камера RealSense, захватывающая все ваши движения, вплоть
-                | до мимики, и есть приложения, которые реализуют ее возможности.
+                | Всё просто. 3D-камера Intel® RealSense™ выводит пользовательский интерфейс
+                | на новый футуристический уровень, благодаря определению пространственных
+                | параметров и отслеживанию человеческих движений.
               p
-                | Камера RealSense™ способна сканировать объекты, оценивая глубину, размеры,
-                | контуры, цвета и расстояние до предметов. С полученными в результате этого
-                | виртуальными копиями объектов можно выполнять любые манипуляции, и даже
-                | печатать их на 3D-принтерах. Технология отслеживает движения рук и пальцев,
-                | распознает речь и анализирует мимику человека (положение и форму губ, глаз и щек).
-                | Все это делает ее мощным инструментом для разработки приложений нового поколения.
+                | Устройства с 3D-камерой Intel® RealSense™ оснащены тремя линзами: обычной камеры,
+                | инфракрасной камеры и инфракрасного лазерного проектора. Вместе эти три линзы
+                | позволяют устройству определять пространственные параметры посредством отслеживания
+                | отражения инфракрасного излучения от объектов, находящихся перед устройством.
+                | Эти визуальные данные в сочетании с ПО Intel® RealSense™ для отслеживания движения
+                | создают бесконтактный интерфейс, который реагирует на движения пальцев, рук и головы,
+                | а также на изменение выражения лица.
+                br
+                | 3D-камера Intel® RealSense™ позволит реализовать удивительные возможности
+                | с помощью комплекта Intel® RealSense™ SDK.
               p
-                | Корпорация Intel® организует ивенты для разработчиков, интересующихся
-                | перцепционными вычислениями, созданием 3D-интерфейсов и виртуальной реальностью.
-                | Специалисты Intel расскажут об основах разработки приложений для камер RealSense™.
-                | После этого участники семинара смогут самостоятельно опробовать возможности
-                | SDK и самого устройства.
+                | Мы стремимся сделать приложения Intel® RealSense™ доступными всем пользователям телефонов,
+                | планшетов и компьютеров — и ваше приложение может стать одним из них.
+                | Помогите разработать следующее поколение естественных и интуитивно понятных приложений
+                | с эффектом погружения, которые включают в себя отслеживание движений рук и пальцев,
+                | анализ выражения лица, распознавание речи, дополненную реальность и 3D-сканирование.
 
-            strong.title.title_small
-              | Взгляните на создание интерфейсов по-новому и станьте одним из первопроходцев
-              | следующей ступени взаимодействия человека и компьютера
+              p
+                | Для разработки приложений необходимо соответствовать
+                | <a class="link" target="_blank" href="https://software.intel.com/sites/default/files/managed/15/c4/Getting_Started.pdf">минимальным требованиям:</a>
 
-        .about-technology-picture(style="background-image:url('img/bg.jpg')")
-    //END about-technology
+              strong.title.title_small.about-technology__strong
+                | Взгляните на создание интерфейсов по-новому и станьте одним из первопроходцев
+                | следующей ступени взаимодействия человека и компьютера
 
-    //BEGIN event-structure
-    section#event-structure
-      .wrapper
-        .l-center
-          h2.title.title_medium.title_mrg
-            | Структура<br>хакатона
-
-          .l-center-narrow
-            strong.title
-              | 25 июля
-            ul.timeline
-              li.timeline__item
-                strong.timeline__time
-                  | 11:00
-                p.timeline__text
-                  | Регистрация участников
-                  br
-                  | Приветственный кофе
-              li.timeline__item
-                strong.timeline__time
-                  | 12:00
-                p.timeline__text
-                  | Открытие
-              li.timeline__item
-                strong.timeline__time
-                  | 12:15
-                p.timeline__text
-                  | Обзор технологии Intel RealSense. Начало работы с комплектом разработчика
-                  | Intel RealSense Development Kit. Александр Лазарев,
-                  | Старший Инженер отдела по работе с разработчиками ПО
-              li.timeline__item
-                strong.timeline__time
-                  | 13:00
-                p.timeline__text
-                  | Разбор приложений для Intel RealSense на языках C# и Visual Basic, Unity.
-                  | Михаил Никольский, Ведущий Инженер по разработке ПО
-              li.timeline__item
-                strong.timeline__time
-                  | 13:45
-                p.timeline__text
-                  | Кофе-брейк
-              li.timeline__item
-                strong.timeline__time
-                  | 14:00
-                p.timeline__text
-                  | Сканирование 3D-объектов для электронной коммерции и 3D-принтинга.
-                  | Константин Попов, Генеральный директор Cappasity 3D
-              li.timeline__item
-                strong.timeline__time
-                  | 14:30
-                p.timeline__text
-                  | Питчинг идей
-              li.timeline__item
-                strong.timeline__time
-                  | 15:00
-                p.timeline__text
-                  | Старт хакатона
-
-            strong.title
-              | 26 июля
-            ul.timeline
-              li.timeline__item
-                strong.timeline__time
-                  | 15:00
-                p.timeline__text
-                  | Презентация проектов и демонстраций
-              li.timeline__item
-                strong.timeline__time
-                  | 12:00
-                p.timeline__text
-                  | Открытие
-              li.timeline__item.timeline__item_last
-                strong.timeline__time
-                  | Фуршет и награждение победителей
-
-          h2.title.title_medium.title_mrg
-            | Место<br>проведения
-
-        .slider
-          .slide(style="background-image:url('img/slide1.jpg')")
-          .slide(style="background-image:url('img/slide2.jpg')")
-          .slide(style="background-image:url('img/slide1.jpg')")
-          .slide(style="background-image:url('img/slide2.jpg')")
-          .slide(style="background-image:url('img/slide1.jpg')")
-          .slide(style="background-image:url('img/slide2.jpg')")
-          .slide(style="background-image:url('img/slide1.jpg')")
-          .slide(style="background-image:url('img/slide2.jpg')")
-    //END event-structure
-
-    //BEGIN about-camera
-    section#about-camera
-        .about-camera
-          .about-camera__picture
-            img(src="img/camera-intro.png", alt="Camera")
-          .l-center
-            .about-camera__left
-              .about-camera__text
-                h2.title.title_medium
-                  | Технический обзор
-                p
-                  | Камера Intel® RealSense переопределяет то, как человек заимодействует
-                  | с устройствами в играх, развлечениях, и создании контента.
-                  | Благодаря полному цвету 1080p и датчику глубины, лучшему в своем классе,
-                  | камера передает на компьютеры и планшеты 3D картинку, а с ней и новые
-                  | захватывающие ощущения. Взаимодействие становится более интуитивным,
-                  | а управление устройством - гибким, при помощи анализа лица, рук и
-                  | отслеживания движений пальцев, распознавание речи, устранения фона
-                  | и дополненной реальности.
-
-            .about-camera__right
+            aside.about-technology__aside
               figure.figure
                 .figure__picture
                   img(src="img/face.png", alt="facial analysis")
@@ -243,42 +163,165 @@ block content
                 figcaption.figure__text
                   | Дополненная<br>реальность
 
-    //END about-camera
+        .about-technology-picture(style="background-image:url('img/bg.jpg')")
+    //END about-technology
+
+    //BEGIN event-structure
+    section#event-structure
+      .wrapper
+        .l-center
+          h2.title.title_medium.title_mrg
+            | Структура<br>хакатона
+
+          .l-center-narrow
+            strong.title
+              | 24 июля
+            ul.timeline
+              li.timeline__item
+                strong.timeline__time
+                  | 15:00
+                p.timeline__text
+                  | cбор и регистрация
+              li.timeline__item
+                strong.timeline__time
+                  | 15:30
+                p.timeline__text
+                  | открытие, вступительное слово, рассказ о программе мероприятия
+              li.timeline__item
+                strong.timeline__time
+                  | 15:45
+                p.timeline__text
+                  | обзор технологии Intel® RealSense™. Начало работы с
+                  | комплектом разработчика Intel® RealSense™ Development Kit
+              li.timeline__item
+                strong.timeline__time
+                  | 16:30
+                p.timeline__text
+                  | разбор приложений Intel® RealSense™ SDK
+              li.timeline__item
+                strong.timeline__time
+                  | 17:30
+                p.timeline__text
+                  | Примеры реализованных проектов для 3D-камеры Intel® RealSense™
+              li.timeline__item
+                strong.timeline__time
+                  | 18:00
+                p.timeline__text
+                  | Старт хакатона
+
+            strong.title
+              | 25 июля
+            ul.timeline
+              li.timeline__item
+                strong.timeline__time
+                  | до 14:00
+                p.timeline__text
+                  | разработка приложений
+              li.timeline__item
+                strong.timeline__time
+                  | 14:00
+                p.timeline__text
+                  | Презентация проектов и демонстраций
+              li.timeline__item
+                strong.timeline__time
+                  | 16:00
+                p.timeline__text
+                  | Выбор победителей, награждение
+
+          h2.title.title_medium.title_mrg
+            | Место<br>проведения
+
+        .slider
+          .slide(style="background-image:url('img/slider/slide1.jpg')")
+          .slide(style="background-image:url('img/slider/slide2.jpg')")
+          .slide(style="background-image:url('img/slider/slide3.jpg')")
+          .slide(style="background-image:url('img/slider/slide4.jpg')")
+    //END event-structure
+
+    //- //BEGIN about-camera
+    //- section#about-camera
+    //-     .about-camera
+    //-       .about-camera__picture
+    //-         img(src="img/camera-intro.png", alt="Camera")
+    //-       .l-center
+    //-         .about-camera__left
+    //-           .about-camera__text
+    //-             h2.title.title_medium
+    //-               | Технический обзор
+    //-             p
+    //-               | Камера Intel® RealSense переопределяет то, как человек заимодействует
+    //-               | с устройствами в играх, развлечениях, и создании контента.
+    //-               | Благодаря полному цвету 1080p и датчику глубины, лучшему в своем классе,
+    //-               | камера передает на компьютеры и планшеты 3D картинку, а с ней и новые
+    //-               | захватывающие ощущения. Взаимодействие становится более интуитивным,
+    //-               | а управление устройством - гибким, при помощи анализа лица, рук и
+    //-               | отслеживания движений пальцев, распознавание речи, устранения фона
+    //-               | и дополненной реальности.
+
+    //-         .about-camera__right
+    //-           figure.figure
+    //-             .figure__picture
+    //-               img(src="img/face.png", alt="facial analysis")
+    //-             figcaption.figure__text
+    //-               | Анализ<br>лица
+    //-           figure.figure
+    //-             .figure__picture
+    //-               img(src="img/hand.png", alt="hand & finger tracking")
+    //-             figcaption.figure__text
+    //-               | Слежение за<br>руками и пальцами
+    //-           figure.figure
+    //-             .figure__picture
+    //-               img(src="img/speech.png", alt="speech recognition")
+    //-             figcaption.figure__text
+    //-               | Распознание<br>речи
+    //-           figure.figure
+    //-             .figure__picture
+    //-               img(src="img/background.png", alt="background subtraction")
+    //-             figcaption.figure__text
+    //-               | Удаление<br>фона
+    //-           figure.figure
+    //-             .figure__picture
+    //-               img(src="img/augmented-reality.png", alt="augmented reality")
+    //-             figcaption.figure__text
+    //-               | Дополненная<br>реальность
+    //- //END about-camera
 
     //BEGIN partners
-    section.partners
+    section#partners.partners
       .l-center
         h2.title.title_medium.title_mrg
           | Информационные<br>партнеры
         ul.partners__grid
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/geeks-lab.png", alt="geeks-lab")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/geeks-lab.png", alt="geeks-lab")
+              img.color(src="img/partners/geeks-lab-color.png", alt="geeks-lab")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/growth-up.png", alt="growth-up")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/growth-up.png", alt="growth-up")
+              img.color(src="img/partners/growth-up-color.png", alt="growth-up")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/it-academy.png", alt="it-academy")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/it-academy.png", alt="it-academy")
+              img.color(src="img/partners/it-academy-color.png", alt="it-academy")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/itkpi.png", alt="itkpi")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/itkpi.png", alt="itkpi")
+              img.color(src="img/partners/itkpi-color.png", alt="itkpi")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/itvdn.png", alt="itvdn")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/itvdn.png", alt="itvdn")
+              img.color(src="img/partners/itvdn-color.png", alt="itvdn")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/seclub.png", alt="seclub")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/seclub.png", alt="seclub")
+              img.color(src="img/partners/seclub-color.png", alt="seclub")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/itkpi.png", alt="itkpi")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/itkpi.png", alt="itkpi")
+              img.color(src="img/partners/itkpi-color.png", alt="itkpi")
           li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/itvdn.png", alt="itvdn")
-          li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/seclub.png", alt="seclub")
-          li.partners__grid-item
-            a(href="#")
-              img(src="img/partners/seclub.png", alt="seclub")
+            a.partners__link(href="#")
+              img.monochrome(src="img/partners/itvdn.png", alt="itvdn")
+              img.color(src="img/partners/itvdn-color.png", alt="itvdn")
     //END partners
