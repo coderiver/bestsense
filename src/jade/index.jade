@@ -74,7 +74,7 @@ block content
     a(name="about-technology")
     section#about-technology
       .video
-        img(src="img/video.jpg", alt="Video")
+        img(src="img/video.gif", alt="Video")
       .wrapper
         .l-center
           h2.title.title_medium.title_mrg
@@ -186,11 +186,21 @@ block content
             | Место<br>проведения
 
         .slider
+          .slide(style="background-image:url('img/slide1.jpg')")
+          .slide(style="background-image:url('img/slide2.jpg')")
+          .slide(style="background-image:url('img/slide1.jpg')")
+          .slide(style="background-image:url('img/slide2.jpg')")
+          .slide(style="background-image:url('img/slide1.jpg')")
+          .slide(style="background-image:url('img/slide2.jpg')")
+          .slide(style="background-image:url('img/slide1.jpg')")
+          .slide(style="background-image:url('img/slide2.jpg')")
     //END event-structure
 
     //BEGIN about-camera
     section#about-camera
         .about-camera
+          .about-camera__picture
+            img(src="img/camera-intro.png", alt="Camera")
           .l-center
             .about-camera__left
               .about-camera__text
@@ -233,8 +243,6 @@ block content
                 figcaption.figure__text
                   | Дополненная<br>реальность
 
-          .about-camera__picture
-            img(src="img/camera-intro.png", alt="Camera")
     //END about-camera
 
     //BEGIN partners

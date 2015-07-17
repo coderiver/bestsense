@@ -52,8 +52,10 @@ a.btn_large
   line-height: 1
 
 .title_mrg
-  margin-top: em(150,72)
-  margin-bottom: em(125,72)
+  // margin-top: em(150,72)
+  // margin-bottom: em(125,72)
+  margin-top: percentage(150/960)
+  margin-bottom: percentage(125/960)
   &:first-child
     margin-top: 0
 
@@ -79,10 +81,13 @@ a.btn_large
     font-size: 40px
   .title_large
     font-size: 72px
+  .title_mrg
+    margin-top: percentage(75/960)
+    margin-bottom: percentage(50/960)
   .subtitle
     font-size: 20px
 
-+r($bp1)
++r($bp2)
   .title
     font-size: 20px
   .title_medium

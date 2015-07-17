@@ -5,10 +5,12 @@
   left: 0
   bottom: 0
   padding-left: 30px
-  max-width: 245px
+  max-width: 265px
   +vertical
   white-space: nowrap
+  +trans(background)
   &:hover
+    background: #FFF
     .nav__link-inner
       width: 100%
       opacity: 1
@@ -19,10 +21,17 @@
   white-space: normal
 
 .nav__list-item
+  &:last-child
+    .nav__link
+      padding-bottom: 0
+      &:after
+        display: none
+
+.nav__link
   position: relative
   display: block
   box-sizing: border-box
-  padding: 0 0 32px 40px
+  padding: 0 20px 32px 40px
   text-decoration: none
   +f(r, 12, 50)
   line-height: 1.83
@@ -52,10 +61,14 @@
     width: 1px
     background: $blue
     +trans(height)
-  &:last-child
-    padding-bottom: 0
+  &.is-active
+    color: $text
+    &:before
+      background: $blue
+      box-shadow: 0 0 0 2px $blue
+  &.draw-line
     &:after
-      display: none
+      height: 100%
   &:hover
     color: $blue
     &:before
@@ -64,23 +77,6 @@
     color: $activeblue
     &:before
       background: $activeblue
-  &.is-active
-    color: $text
-    &:before
-      background: $blue
-      box-shadow: 0 0 0 2px $blue
-    &:after
-      height: 100%
-  &.is-active + &
-    &:before
-      &:before
-      background: $blue
-      box-shadow: 0 0 0 2px $blue
-
-.nav__link
-  text-decoration: none
-  color: inherit
-
 
 .nav__link-inner
   display: block
