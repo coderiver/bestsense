@@ -77,6 +77,7 @@ a.btn_large { line-height: 50px; }
 
 .subtitle { display: block; margin: 25px 0 0; color: #777; font-family: "AvenirNextCyr-Regular", Arial, sans-serif; font-weight: normal; font-size: 24px; line-height: 1.333; }
 .subtitle:first-child { margin-top: 0; }
+.subtitle b, .subtitle strong { font-family: "AvenirNextCyr-Demi", Arial, sans-serif; font-weight: normal; }
 
 .subtitle_small { font-size: 18px; }
 
@@ -114,8 +115,10 @@ ul.marked-list { list-style-type: disc; }
 
 .menu { float: right; font-size: 0; }
 
-.menu__btn { background: none; }
-.menu__btn:before, .menu__btn:after { content: ""; position: absolute; width: 100%; height: 1px; background: #EEE; }
+.menu__btn { background: none; position: relative; padding: 10px; }
+
+.menu__btn-icon { position: relative; padding: 8px 0; height: 2px; width: 20px; background: #EEE; }
+.menu__btn-icon:before, .menu__btn-icon:after { content: ""; position: absolute; width: 100%; height: 1px; background: #EEE; }
 
 .header__logo { display: inline-block; vertical-align: middle; }
 .header__logo img { display: block; }
@@ -231,7 +234,7 @@ ul.marked-list { list-style-type: disc; }
 .about-technology-picture { margin-top: 20px; background-repeat: no-repeat; background-position: center center; background-size: cover; }
 .about-technology-picture:before { content: ""; display: block; padding-bottom: 102.33918%; }
 
-.wrapper { padding-top: 11.69591%; background: #FFF; position: relative; z-index: 2; }
+.wrapper { padding-top: 160px; background: #FFF; position: relative; z-index: 2; }
 
 .timeline { margin: 50px 0 110px 120px; font-family: "AvenirNextCyr-Regular", Arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.5; }
 .timeline:last-child { margin-bottom: 0; }
@@ -250,8 +253,9 @@ ul.marked-list { list-style-type: disc; }
 
 .timeline__time { position: absolute; top: 0; left: 40px; font-family: "AvenirNextCyr-Bold", Arial, sans-serif; font-weight: normal; font-size: 12px; }
 
-.slider { overflow: hidden; height: 380px; *zoom: 1; }
+.slider { overflow: hidden; height: 380px; *zoom: 1; cursor: url("../img/cursors/drag1.png"), move; }
 .slider:after { content: " "; display: table; clear: both; }
+.slider.dragging { cursor: url("../img/cursors/drag2.png"), move; }
 @media only screen and (max-width: 767px) { .slider { height: 240px; }
   .slider .slide { height: 240px; } }
 
@@ -281,14 +285,14 @@ ul.marked-list { list-style-type: disc; }
 
 .figure__text { display: table-cell; vertical-align: middle; font-family: "AvenirNextCyr-Bold", Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.33; }
 
-.partners { margin-top: 16.66667%; }
+.partners { margin-top: 160px; }
 
 .partners__grid { font-size: 0; text-align: center; margin-bottom: -60px; }
 
 .partners__grid-item { display: inline-block; vertical-align: middle; margin-bottom: 60px; width: 240px; box-sizing: border-box; padding: 0 30px; }
 
 .partners__link { display: inline-block; text-decoration: none; position: relative; }
-.partners__link img { display: block; max-width: 100%; }
+.partners__link img { display: block; max-width: 100%; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .partners__link img.monochrome { position: relative; z-index: 0; -webkit-transition: none; transition: none; }
 .partners__link img.color { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .partners__link:hover img.color { opacity: 1; visibility: visible; }

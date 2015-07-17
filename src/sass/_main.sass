@@ -167,7 +167,8 @@
 
 
 .wrapper
-  padding-top: percentage(160/1368)
+  // padding-top: percentage(160/1368)
+  padding-top: 160px
   background: #FFF
   position: relative
   z-index: 2
@@ -230,6 +231,9 @@
   overflow: hidden
   height: 380px
   +clr
+  cursor: url('../img/cursors/drag1.png'), move
+  &.dragging
+    cursor: url('../img/cursors/drag2.png'), move
   +r($bp2)
     height: 240px
     .slide
@@ -309,7 +313,8 @@
 
 
 .partners
-  margin-top: percentage(160/960)
+  // margin-top: percentage(160/960)
+  margin-top: 160px
 
 .partners__grid
   font-size: 0
@@ -332,6 +337,7 @@
   img
     display: block
     max-width: 100%
+    transform: translate3d(0,0,0)
   img.monochrome
     position: relative
     z-index: 0

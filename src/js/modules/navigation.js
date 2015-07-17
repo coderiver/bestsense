@@ -40,17 +40,26 @@ function Navigation() {
     };
 
     _.buildScenes = function() {
-        _.controller = new ScrollMagic.Controller({loglevel: 2});
+        _.controller = new ScrollMagic.Controller({container: 'body', loglevel: 1});
         $.each(_.$sections, function(index, section) {
             new ScrollMagic.Scene({
                 triggerElement: section,
                 duration: $(section).outerHeight(),
                 triggerHook: 'onCenter'
             })
-                .on('start', function() {
-                    $(_.$links[index]).toggleClass(activeClass);
-                    if (index > 0) {
-                        $(_.$links[index - 1]).toggleClass(drawLineClass);
+                .on('start', function(e) {
+                    if (e.scrollDirection == 'FORWARD') {
+                        $(_.$links[index]).addClass(activeClass);
+                        if (index > 0) {
+                            $(_.$links[index - 1]).addClass(drawLineClass);
+                        }
+                    }
+
+                    if (e.scrollDirection == 'REVERSE') {
+                        $(_.$links[index]).removeClass(activeClass);
+                        if (index > 0) {
+                            $(_.$links[index - 1]).removeClass(drawLineClass);
+                        }
                     }
                 })
                 .addTo(_.controller);
@@ -58,8 +67,11 @@ function Navigation() {
     };
 
     _.init = function() {
+        // add active class to first item of navigation
+        $(_.$links[0]).addClass(activeClass);
         _.initEvents();
         _.buildScenes();
+
         console.log(_);
     };
 

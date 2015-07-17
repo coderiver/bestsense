@@ -1,11 +1,5 @@
 extends _layout
 
-//- block vars
-//-   - var pageTitle = 'Index'
-//-   - var bodyClass = 'index-page'
-//-   - var outClass  = 'out_mod'
-//-   - var svgSprite = 'img/sprite.svg'
-
 block content
   .content-wrapper
     //BEGIN intro
@@ -14,15 +8,11 @@ block content
       .intro__heading
         h1.title.title_large
           | RealSense<sup>TM</sup><br>Hands-On
-        strong.subtitle.subtitle_small
-          | Хакатон приложений к 3D-камере
+        .subtitle.subtitle_small
+          strong Хакатон приложений к 3D-камере
           br
-          br
-          | 24-25 июля
-          br
-          | Испытайте новое измерение технологий<br>с 3D-камерой Intel® RealSense™.
+          | Испытайте новое измерение технологий<br>с 3D-камерой Intel® RealSense™
 
-          //- | Невероятный хакатон приложений к 3D камере<br>на тему дополненной реальности
 
       .intro__picture
         img(src="img/camera-intro.png", alt="Camera")
@@ -37,9 +27,8 @@ block content
 
         .b__text
           h2.title
-            | Прими участие в создании будущего.
-            //- | Мы познакомим вас с технологией, которая уже в этом году
-            //- | начнёт менять мир взаимодействия человека с компьютером
+            | Прими участие в создании будущего
+
           ul.subtitle.marked-list
             li
               | Познакомься с технологией, которая уже в этом году начнёт
@@ -76,7 +65,6 @@ block content
 
         .b__text
           h2.subtitle
-            //- | Лучшие получат<br>от нас призы —
             | Призы
           strong.title.title_medium
             | Ноутбуки
@@ -130,7 +118,7 @@ block content
 
               p
                 | Для разработки приложений необходимо соответствовать
-                | <a class="link" target="_blank" href="https://software.intel.com/sites/default/files/managed/15/c4/Getting_Started.pdf">минимальным требованиям:</a>
+                | <a class="link" target="_blank" href="https://software.intel.com/sites/default/files/managed/15/c4/Getting_Started.pdf">минимальным требованиям</a>
 
               strong.title.title_small.about-technology__strong
                 | Взгляните на создание интерфейсов по-новому и станьте одним из первопроходцев

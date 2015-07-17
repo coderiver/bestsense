@@ -22,6 +22,16 @@ $(document).ready(function() {
         body.removeClass('nav-active');
     });
 
+    slider.on('init', function(e, slick) {
+        slick.$slider.mousedown(function() {
+            $(this).addClass('dragging');
+        });
+
+        slick.$slider.mouseup(function() {
+            $(this).removeClass('dragging');
+        });
+    });
+
     slider.slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -29,6 +39,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         pauseOnHover: false,
+        touchThreshold: 10,
         responsive: [
             {
                 breakpoint: 1100,
@@ -55,7 +66,7 @@ $(document).ready(function() {
         var pic          = $('.about-technology-picture');
         var video        = $('.video');
         var text         = $('.about-camera__text');
-        scrollController = new ScrollMagic.Controller({loglevel: 2});
+        scrollController = new ScrollMagic.Controller({container: 'body', loglevel: 1});
 
         // scene for video in #about-technology section
         new ScrollMagic.Scene({
