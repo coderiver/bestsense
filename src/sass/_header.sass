@@ -16,24 +16,25 @@
     height: auto
     position: relative
     padding: 10px 60px 10px 20px
+    margin-bottom: 70px
     .header__left
       float: none
       line-height: 50px
-    // .header__date
-    //   font-size: 12px
-    //   display: block
-    //   margin: 0
-    // .btn
-    //   display: block
-    // .lang
-    //   display: block
 
   +r(500)
+    .header__left
+      line-height: 60px
     .header__logo
       display: block
       margin-top: 10px
+      padding: 4px 0
       &:first-child
         margin-top: 0
+        img
+          width: 185px
+      &:last-child
+        img
+          width: 80px
     .header__amp
       display: none
 
@@ -56,47 +57,56 @@
     .menu__btn
       display: block
       position: absolute
+      z-index: 5
       top: 0
       right: 0
     .menu__inner
       display: none
     .header__date
       position: absolute
-      top: -50px
+      // top: -50px
+      top: 13px
       left: 20px
+    .btn
+      display: block
+      margin: auto
+      width: 215px
+    .lang
+      display: block
+      margin: 10px auto 0
+      width: 114px
+      text-align: center
+      box-sizing: border-box
+      background: none
 
     &.step-1
-      padding-top: 60px
+      padding-top: 0
       width: 100%
       height: 100%
-      overflow: auto
       .menu__inner
         display: block
+        // position: absolute
         position: static
-        position: absolute
-        top: 60px
-        left: 0
-        right: 0
-        bottom: 0
+        z-index: 0
+        box-sizing: border-box
+        height: 100%
+        // top: 60px
+        // top: 0
+        // left: 0
+        // right: 0
+        // bottom: 0
+        padding: 60px 20px 20px
         transform: translate3d(0,-110%,0)
         opacity: 0
         transition: 0.5s ease
         transition-property: opacity, transform
+        overflow: auto
+        -webkit-overflow-scrolling: touch
       .menu__navigation
         display: block
-      .btn
-        width: 60%
-        min-width: 0
-      .lang
-        width: 40%
-        box-sizing: border-box
-        li
-          width: 50%
-      .menu__btn
-        background: none
 
     &.step-2
-      background: rgba(#000, 0.85)
+      background: #FFF
       .menu__inner
         transform: translate3d(0,0,0)
         opacity: 1
@@ -113,7 +123,7 @@
 
 .menu__btn
   display: none
-  background: rgba(#FFF, 0.3)
+  background: #FFF
   position: relative
   padding: 20px
   line-height: 20px
@@ -133,7 +143,7 @@
   position: relative
   height: 3px
   width: 20px
-  background: #95A1AD
+  background: $blue
   +trans(background)
   &:before,
   &:after
@@ -142,7 +152,7 @@
     width: 20px
     height: 3px
     left: 0
-    background: #95A1AD
+    background: $blue
     +trans
   &:before
     top: -7px
@@ -151,13 +161,16 @@
 
 .menu__navigation
   display: none
-  +f(demi, 14)
-  margin-bottom: 10px
+  +f(r, 14)
+  margin: 50px 0
   text-transform: uppercase
   text-align: center
-  color: $lightgray
+  color: $text
   > li
     border-top: 1px solid rgba(#FFF, 0.3)
+    margin-top: 10px
+    &:first-child
+      margin-top: 0
   a
     color: inherit
     display: block
